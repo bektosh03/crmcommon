@@ -11,7 +11,7 @@ import (
 	_ "github.com/lib/pq"
 )
 
-func connect(cfg Config) (*sqlx.DB, error) {
+func Connect(cfg Config) (*sqlx.DB, error) {
 	db, err := sqlx.Connect(
 		"postgres",
 		fmt.Sprintf(
